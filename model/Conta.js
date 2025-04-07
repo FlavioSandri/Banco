@@ -1,3 +1,4 @@
+
 class Conta{
     constructor(saldo, senha, agencia, numero_conta, titular){
     this.saldo = saldo
@@ -8,7 +9,7 @@ class Conta{
   }
  
   autenticar(agencia, numero_conta, senha){
- 
+      
   }
  
   transferir(){
@@ -36,5 +37,16 @@ class Conta{
   }
  
 }
+
+
+function pagarContas(titulares){
+  let c1 = new Conta(500, 1234, 543, 2589, titulares[0])
+  let c2 = new Conta(500, 1234, 543, 2589, titulares[1])
+  let c3 = new Conta(500, 1234, 543, 2589, titulares[2])
+  let contas = [c1, c2, c3]
+  return contas
+}
+
+
  
-export {Conta}
+export {Conta, pagarContas}
